@@ -1,0 +1,45 @@
+.center-body{
+    @extend %center;
+    max-width: $maxWidth_center;
+}
+.container-flex{
+    padding: 0 0.8rem;
+    @extend %flex-bettween;
+    flex-direction: column;
+    @include flex-on(700px,row);
+    .flex-element{
+        width: 100%;
+        max-width: 700px;
+        margin: 2rem 0;
+        
+    }
+    .img-element{
+        width: 100%;
+        max-width: 700px;
+
+    }
+}
+.container-fluid{
+    width: 100%;
+    position: absolute;
+    left: 0;
+  
+}
+.flex-card{
+
+    p{
+        margin: 1.2rem 0; 
+        
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .btn{
+        margin-top: auto;
+        align-content: flex-end;
+
+    }
+    
+}

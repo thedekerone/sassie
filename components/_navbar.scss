@@ -1,0 +1,62 @@
+*{
+    font-family: 'Gothic A1', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: black;
+
+
+}
+p{
+    line-height: 1.5rem;
+}
+.navbar-container{
+    position: relative;
+    height: $height_navbar;
+
+    width: 100%;
+    overflow: hidden;
+   display: flex;
+   justify-content: center;
+   @extend %box-shadow;
+}
+.navbar{
+
+    height: $height_navbar;
+
+
+    @extend %center;
+    @extend %flex-bettween;
+    max-width: $maxWidth_center;
+    width: 100%;
+    h1{
+        color: $color_green-head;
+        margin-left: 1.5rem;
+    }
+
+    background: $color-white-transparent;
+}
+
+.nav-list{
+    display: none;
+    width: 23rem;
+    ul{
+        @extend %flex-bettween;
+        
+       margin-right: 1.5rem;
+        li{
+            
+            @extend %flex-center;
+            display: inline;
+            a{
+                color: $color-brown;
+                font-weight: bold;
+            }
+        }   
+    }
+    @include display-on(700px,inline);
+}
+.nav-icon{
+    margin-right: 1.5rem;
+    @include display-on(700px,none);
+}

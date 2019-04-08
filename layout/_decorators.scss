@@ -1,0 +1,47 @@
+.h1-big{
+    font-weight: bold;
+    font-size: 2rem;
+    color: $color_green-head;
+    margin: 0.5rem 0;
+}
+.bg-green{
+    background-color: #117938;
+}
+.height-5{
+    height: 500px;
+}
+.height-1{
+    height: 50px;
+}
+.text-white{
+color: white;
+}
+.text-grey{
+    color:$color-grey;
+}
+.text-lightgrey{
+    color: lightgrey;
+}
+.text-yellow{
+    color: yellow;
+}
+.p-relative{
+    position: relative;
+}
+.p-fixed{
+    position: fixed;
+    
+}
+
+// margins
+.m-1{
+    margin: 0.6rem;
+}
+.my-1{
+    margin-top: 0.6rem;
+    margin-bottom: 0.6rem;
+}
+.my-5{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
