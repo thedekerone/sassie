@@ -1,0 +1,39 @@
+
+@media screen and (min-width:700px) {
+
+        .container-flex{
+            .flex-element{
+        
+            }
+            .img-element{
+                
+               .video{
+                   display: none;
+               } 
+            }
+        }
+    }
+    @media screen and (min-width:1150px) {
+        .navbar{
+    
+            justify-content: flex-start;
+        }
+        .img-element::after{
+            left: 4%;
+        }
+        .container-flex {
+            .flex-element{
+            width: 500px;
+            margin: 2rem 5rem 2rem 0;
+            }
+            .img-element{
+                width: 550px;
+                .video{
+                    display: flex;
+                    height: auto;
+    
+                }
+            }
+            }
+    
+    }

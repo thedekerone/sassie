@@ -13,6 +13,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 @mixin display-on($screen-size,$display){
     @media screen and (min-width:$screen-size) {
         display: $display;
@@ -29,3 +30,4 @@
     -moz-box-shadow: 0px 1px 12px -8px rgba(0,0,0,0.75);
     box-shadow: 0px 1px 12px -8px rgba(0,0,0,0.75);
 }
+

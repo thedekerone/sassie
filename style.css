@@ -9,7 +9,7 @@
   -ms-flex-align: center;
   align-items: center; }
 
-.nav-list ul li {
+.nav-list ul li, .container-flex .img-element, .container-flex .img-element .video, .container-flex .img-element .play, .fixed-banner, .banner-left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,11 +23,6 @@
 .navbar, .center-body {
   margin-left: auto;
   margin-right: auto; }
-
-.navbar-container {
-  -webkit-box-shadow: 0px 1px 12px -8px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 1px 12px -8px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 1px 12px -8px rgba(0, 0, 0, 0.75); }
 
 .btn {
   width: 100%;
@@ -53,12 +48,25 @@
   background-color: #975A3F;
   color: white; }
 
+button:hover {
+  cursor: pointer; }
+
+button {
+  -webkit-transition-duration: .25s;
+  -o-transition-duration: .25s;
+  transition-duration: .25s; }
+
 * {
   font-family: 'Gothic A1', sans-serif;
   margin: 0;
   padding: 0;
   text-decoration: none;
   color: black; }
+
+*, *:after, *::before {
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 p {
   line-height: 1.5rem; }
@@ -77,14 +85,14 @@ p {
 
 .navbar {
   height: 70px;
-  max-width: 1200px;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.9); }
+  max-width: 1300px;
+  width: 100%; }
   .navbar h1 {
     color: #117938;
     margin-left: 1.5rem; }
 
 .nav-list {
+  margin-left: 2rem;
   display: none;
   width: 23rem; }
   .nav-list ul {
@@ -92,8 +100,41 @@ p {
     .nav-list ul li {
       display: inline; }
       .nav-list ul li a {
+        position: relative;
         color: #975A3F;
-        font-weight: bold; }
+        font-weight: 600; }
+      .nav-list ul li a:hover {
+        color: #117938; }
+      .nav-list ul li a::after {
+        -webkit-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 1px;
+        background-color: #117938;
+        -webkit-transform-origin: right center;
+        -ms-transform-origin: right center;
+        transform-origin: right center;
+        -webkit-transform: scale(0, 1);
+        -ms-transform: scale(0, 1);
+        transform: scale(0, 1);
+        -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition: -webkit-transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        -o-transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+      .nav-list ul li a:hover::after {
+        -webkit-transform: scale(1, 1);
+        -ms-transform: scale(1, 1);
+        transform: scale(1, 1);
+        -webkit-transform-origin: left center;
+        -ms-transform-origin: left center;
+        transform-origin: left center; }
   @media screen and (min-width: 700px) {
     .nav-list {
       display: inline; } }
@@ -105,7 +146,7 @@ p {
       display: none; } }
 
 .center-body {
-  max-width: 1200px; }
+  max-width: 1300px; }
 
 .container-flex {
   padding: 0 0.8rem;
@@ -122,11 +163,47 @@ p {
       height: 500px; } }
   .container-flex .flex-element {
     width: 100%;
-    max-width: 700px;
-    margin: 2rem 0; }
+    margin: 0; }
   .container-flex .img-element {
+    position: relative;
+    width: 600px; }
+    .container-flex .img-element .video {
+      height: 500px;
+      position: relative;
+      z-index: 12;
+      width: 100%;
+      overflow: hidden; }
+    .container-flex .img-element .play {
+      cursor: pointer;
+      display: none;
+      width: 90px;
+      height: 90px;
+      position: absolute;
+      background-color: #FFC215;
+      left: -50px;
+      z-index: 12;
+      font-size: 1rem; }
+      @media screen and (min-width: 700px) {
+        .container-flex .img-element .play {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; } }
+    .container-flex .img-element .play i {
+      -webkit-transition-duration: 0.5s;
+      -o-transition-duration: 0.5s;
+      transition-duration: 0.5s; }
+    .container-flex .img-element .play:hover i {
+      -webkit-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      transform: scale(1.5); }
+  .container-flex .img-element::after {
+    content: "";
+    position: absolute;
     width: 100%;
-    max-width: 700px; }
+    height: 40%;
+    background-color: #FFC215;
+    bottom: 0%;
+    z-index: -0.5; }
 
 .container-fluid {
   width: 100%;
@@ -153,6 +230,41 @@ p {
     margin-top: auto;
     -ms-flex-line-pack: end;
     align-content: flex-end; }
+
+.fixed-banner {
+  position: fixed;
+  top: 40%;
+  z-index: 12;
+  width: 3.8rem;
+  height: 10rem;
+  -webkit-box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 2px -1px rgba(0, 0, 0, 0.75); }
+
+.banner-left {
+  position: relative;
+  left: 0;
+  width: 3.8rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg); }
+
+.text-banner {
+  color: white;
+  text-align: center;
+  position: relative;
+  height: 1.3rem;
+  width: 10rem;
+  background-color: #085425; }
+
+.banner-social {
+  position: relative;
+  height: 2.5rem;
+  width: 10rem;
+  background-color: #117938; }
 
 .h1-big {
   font-weight: bold;
@@ -197,3 +309,28 @@ p {
 .my-5 {
   margin-top: 2rem;
   margin-bottom: 2rem; }
+
+.zIndex {
+  z-index: -1; }
+
+@media screen and (min-width: 700px) {
+  .container-flex .img-element .video {
+    display: none; } }
+
+@media screen and (min-width: 1150px) {
+  .navbar {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start; }
+  .img-element::after {
+    left: 4%; }
+  .container-flex .flex-element {
+    width: 500px;
+    margin: 2rem 5rem 2rem 0; }
+  .container-flex .img-element {
+    width: 550px; }
+    .container-flex .img-element .video {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      height: auto; } }
