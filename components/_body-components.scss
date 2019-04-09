@@ -11,15 +11,22 @@
         width: 100%;
         margin: 0;
         
-
+        h1{
+            font-size: 2em;
+        }
     }
     .img-element{
         position: relative;
-        width: 600px;
+        width: 100%;
         @extend %flex-center;
 
+        img{
+            display: inline;
+            z-index: 5;
 
+        }
         .video{
+            display: none;
             height: 500px;
             position: relative;
             z-index: 12;
@@ -28,9 +35,9 @@
             overflow: hidden;
         }
         .play{
-            cursor: pointer;
             display: none;
-            @include display-on(700px,flex);
+            cursor: pointer;
+            @include display-on(1500px,flex);
             width: 90px;
             height: 90px;
             position: absolute;
@@ -51,6 +58,7 @@
 
     .img-element::after{
         content: "";
+        display: none;
         position: absolute;
          width: 100%;
          height: 40%;
