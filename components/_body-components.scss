@@ -154,17 +154,51 @@
 
 }
 .grid-img{
-    width: 140px;
+    width: 100px;
 
-    height: 140px;
+    height: 100px;
 }
 .grid-item{
     padding: 2rem;
     background-color: white;
+    flex-direction: column;
     @extend %flex-center;
     box-shadow: 0px 2px 19px 1px rgba(0,0,0,0.16);
 }
 .grid-container{
-    top: -3.5rem;
+    top: -7rem;
     position: relative;
 }
+
+// context
+.context-element{
+    padding-top: 5rem!important;
+    padding-bottom: 8rem!important;
+}
+    .img-context{
+        @extend %center;
+        text-align: center;
+        width: 90%!important;
+        img{
+ 
+
+            max-width: 500px;
+        }
+    }
+    .h1-context{
+        color: #975A3F;
+        font-size:1.5rem!important;
+    }
+    .flex-reverse{
+        @include flex-on(700px,row-reverse);
+        .flex-element{text-align: right!important;}
+        
+    }
+    .container-fluid2{
+        padding-top: 3rem;
+        position: relative;
+        z-index: -1;
+        bottom:12rem;
+        width: 100%;
+        background-color: #F4EEEB;
+    }

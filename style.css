@@ -20,7 +20,7 @@
   -ms-flex-align: center;
   align-items: center; }
 
-.navbar, .center-body, .grid {
+.navbar, .center-body, .grid, .img-context {
   margin-left: auto;
   margin-right: auto; }
 
@@ -29,8 +29,8 @@
   box-shadow: 0px 4px 24px rgba(17, 121, 56, 0.05); }
 
 .grid {
-  -ms-grid-rows: 200px 200px 200px;
-  grid-template-rows: 200px 200px 200px;
+  -ms-grid-rows: 270px 270px 270px;
+  grid-template-rows: 270px 270px 270px;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr; }
 
@@ -303,18 +303,55 @@ p {
   grid-gap: 2rem; }
 
 .grid-img {
-  width: 140px;
-  height: 140px; }
+  width: 100px;
+  height: 100px; }
 
 .grid-item {
   padding: 2rem;
   background-color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-shadow: 0px 2px 19px 1px rgba(0, 0, 0, 0.16);
   box-shadow: 0px 2px 19px 1px rgba(0, 0, 0, 0.16); }
 
 .grid-container {
-  top: -3.5rem;
+  top: -7rem;
   position: relative; }
+
+.context-element {
+  padding-top: 5rem !important;
+  padding-bottom: 8rem !important; }
+
+.img-context {
+  text-align: center;
+  width: 90% !important; }
+  .img-context img {
+    max-width: 500px; }
+
+.h1-context {
+  color: #975A3F;
+  font-size: 1.5rem !important; }
+
+@media screen and (min-width: 700px) {
+  .flex-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    height: 500px; } }
+
+.flex-reverse .flex-element {
+  text-align: right !important; }
+
+.container-fluid2 {
+  padding-top: 3rem;
+  position: relative;
+  z-index: -1;
+  bottom: 12rem;
+  width: 100%;
+  background-color: #F4EEEB; }
 
 .h1-big {
   font-weight: bold;
@@ -375,7 +412,11 @@ p {
     .container-flex .img-element .video {
       display: none; } }
 
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 900px) {
+  .context-container .container-flex .img-context {
+    text-align: right; }
+  .context-container .flex-reverse .img-context {
+    text-align: left; }
   .navbar-container {
     background-color: transparent;
     -webkit-box-shadow: none;
@@ -386,9 +427,24 @@ p {
     justify-content: flex-start; }
   .img-element::after {
     left: 4%; }
+  .grid {
+    -ms-grid-rows: 150px;
+    grid-template-rows: 150px;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; }
+    .grid .grid-item {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+      flex-direction: row; } }
+
+.flex-card h1 {
+  font-size: 2em !important; }
+
+@media screen and (min-width: 1150px) {
   .container-flex .flex-element {
     width: 500px;
-    margin: 2rem 5rem 2rem 0; }
+    margin: 2rem 5rem 4rem 0; }
     .container-flex .flex-element h1 {
       font-size: 3em; }
   .container-flex .img-element .video {
@@ -399,9 +455,4 @@ p {
   .container-flex .img-element img {
     display: none; }
   .container-flex .img-element::after {
-    display: initial; }
-  .grid {
-    -ms-grid-rows: 200px;
-    grid-template-rows: 200px;
-    -ms-grid-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr; } }
+    display: initial; } }
