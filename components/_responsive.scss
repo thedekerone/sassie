@@ -22,6 +22,7 @@
             background-color: transparent;
             box-shadow: none;
         }
+
         .navbar{
 
             justify-content: flex-start;
@@ -53,5 +54,9 @@
                 display: initial;
             }
             }
-    
+
+    .grid{
+        grid-template-rows: $row-1;
+        grid-template-columns: $col-3;
+    }
     }

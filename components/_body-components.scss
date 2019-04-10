@@ -1,8 +1,10 @@
+
 .center-body{
     @extend %center;
     max-width: $maxWidth_center;
 }
 .container-flex{
+
     padding: 0 0.8rem;
     @extend %flex-bettween;
     flex-direction: column;
@@ -139,4 +141,30 @@
 .social-media:hover{
     cursor: pointer;
     background-color: #085425;
+}
+// GRID
+.grid{
+    @extend %center;
+    display: grid;
+    width: 90%;
+    max-width: $maxWidth_center;
+    @extend %grid-template-mv;
+    
+    grid-gap: 2rem;
+
+}
+.grid-img{
+    width: 140px;
+
+    height: 140px;
+}
+.grid-item{
+    padding: 2rem;
+    background-color: white;
+    @extend %flex-center;
+    box-shadow: 0px 2px 19px 1px rgba(0,0,0,0.16);
+}
+.grid-container{
+    top: -3.5rem;
+    position: relative;
 }
