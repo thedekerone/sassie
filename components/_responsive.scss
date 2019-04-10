@@ -1,6 +1,8 @@
 
 @media screen and (min-width:700px) {
-
+        .fixed-banner{
+            display: flex;
+        }
         .container-flex{
             .flex-element{
                 width: 500px;
@@ -16,6 +18,10 @@
         }
     }
     @media screen and (min-width:1150px) {
+        .navbar-container{
+            background-color: transparent;
+            box-shadow: none;
+        }
         .navbar{
 
             justify-content: flex-start;

@@ -22,13 +22,14 @@ p{
 }
 .navbar-container{
     position: relative;
+    z-index: 100;
     height: $height_navbar;
-
+    background-color: white;
     width: 100%;
     overflow: hidden;
    display: flex;
    justify-content: center;
-//    @extend %box-shadow;
+   @extend %box-shadow;
 }
 .navbar{
 

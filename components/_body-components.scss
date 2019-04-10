@@ -93,7 +93,7 @@
 }
 //  banner
 .fixed-banner{
-
+    display: none;
     position: fixed;
     top: 40%;
     z-index: 12;
@@ -125,5 +125,18 @@
     height: 2.5rem;
     width: 10rem;
     background-color: #117938;
+    @extend %flex-center;
 }
 // banner
+
+// icons
+.social-media{
+
+    width: 2.5rem;
+    height: 2.5rem;
+    @extend %flex-center;
+}
+.social-media:hover{
+    cursor: pointer;
+    background-color: #085425;
+}
