@@ -322,7 +322,8 @@ p {
 
 .context-element {
   padding-top: 5rem !important;
-  padding-bottom: 8rem !important; }
+  padding-bottom: 8rem !important;
+  text-align: center; }
 
 .img-context {
   text-align: center;
@@ -341,9 +342,6 @@ p {
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
     height: 500px; } }
-
-.flex-reverse .flex-element {
-  text-align: right !important; }
 
 .container-fluid2 {
   padding-top: 3rem;
@@ -400,7 +398,14 @@ p {
 .zIndex {
   z-index: -1; }
 
+.max-width-context {
+  max-width: 1000px !important; }
+
 @media screen and (min-width: 700px) {
+  .flex-reverse .flex-element {
+    text-align: right !important; }
+  .flex-element {
+    text-align: left; }
   .fixed-banner {
     display: -webkit-box;
     display: -ms-flexbox;

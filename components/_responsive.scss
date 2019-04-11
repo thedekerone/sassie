@@ -1,6 +1,15 @@
 
 @media screen and (min-width:700px) {
-        .fixed-banner{
+    .flex-reverse{
+        .flex-element{text-align: right!important;}
+    }
+    .flex-element{
+        text-align: left;
+    }
+
+    
+    
+    .fixed-banner{
             display: flex;
         }
         .container-flex{
