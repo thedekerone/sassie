@@ -1,106 +1,97 @@
-button:hover{
-    cursor: pointer;
+button:hover {
+	cursor: pointer;
 }
-button{
-    transition-duration: .25s;
+button {
+	transition-duration: .25s;
 }
-*{
-    font-family: 'Gothic A1', sans-serif;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    color: black;
-
-
+* {
+	font-family: 'Gothic A1', sans-serif;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	color: black;
 }
-*,*:after,*::before{
-    -webkit-font-smoothing: antialiased;
-    box-sizing:border-box;
+*,
+*:after,
+*::before {
+	-webkit-font-smoothing: antialiased;
+	box-sizing: border-box;
 }
-p{
-    line-height: 1.5rem;
+p {
+	line-height: 1.5rem;
 }
-.navbar-container{
-    position: relative;
-    z-index: 100;
-    height: $height_navbar;
-    background-color: white;
-    width: 100%;
-    overflow: hidden;
-   display: flex;
-   justify-content: center;
-   @extend %box-shadow;
+.navbar-container {
+	position: relative;
+	z-index: 100;
+	height: $height_navbar;
+	background-color: white;
+	width: 100%;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	@extend %box-shadow;
 }
-.navbar{
+.navbar {
+	height: $height_navbar;
 
-    height: $height_navbar;
+	@extend %center;
+	@extend %flex-bettween;
 
+	max-width: $maxWidth_center;
+	width: 100%;
+	h1 {
+		color: $color_green-head;
+		margin-left: 1.5rem;
+	}
 
-    @extend %center;
-    @extend %flex-bettween;
-
-    max-width: $maxWidth_center;
-    width: 100%;
-    h1{
-        color: $color_green-head;
-        margin-left: 1.5rem;
-    }
-
-    // background: $color-white-transparent;
+	// background: $color-white-transparent;
 }
 
-.nav-list{
-    margin-left: 2rem;
-    display: none;
-    width: 23rem;
-    ul{
-        @extend %flex-bettween;
-        
-       margin-right: 1.5rem;
-        li{
+.nav-list {
+	margin-left: 2rem;
+	display: none;
+	width: 23rem;
+	ul {
+		@extend %flex-bettween;
 
-            @extend %flex-center;
-            display: inline;
+		margin-right: 1.5rem;
+		li {
+			@extend %flex-center;
+			display: inline;
 
-            a{
-              
-                position: relative;
-                color: #975A3F;
-                font-weight: 600;
-                font-size: 0.9em;
-
-            }
-            a:hover{
-                color: $color_green-head;
-            }
-            a::after{
-
-                transition-duration: 0.5s;
-                content: "";
-                position: absolute;
-                display: block;
-                left: 0;
-                bottom: -2px;
-                width: 100%;
-                height: 1px;
-                background-color: $color_green-head;
-                transform-origin: right center;
-                transform: scale(0,1);
-                transition: transform .3s cubic-bezier(0.25, 0.8, 0.25, 1);
-            }
-            a:hover::after{
-                transform: scale(1,1);
-                transform-origin: left center;
-            }
-            
-
-        }   
-    }
-    @include display-on(700px,inline);
+			a {
+				position: relative;
+				color: #975a3f;
+				font-weight: 600;
+				font-size: 0.9em;
+			}
+			a:hover {
+				color: $color_green-head;
+			}
+			a::after {
+				transition-duration: 0.5s;
+				content: "";
+				position: absolute;
+				display: block;
+				left: 0;
+				bottom: -2px;
+				width: 100%;
+				height: 1px;
+				background-color: $color_green-head;
+				transform-origin: right center;
+				transform: scale(0, 1);
+				transition: transform .3s cubic-bezier(0.25, 0.8, 0.25, 1);
+			}
+			a:hover::after {
+				transform: scale(1, 1);
+				transform-origin: left center;
+			}
+		}
+	}
+	@include display-on(700px,inline);
 }
 
-.nav-icon{
-    margin-right: 1.5rem;
-    @include display-on(700px,none);
+.nav-icon {
+	margin-right: 1.5rem;
+	@include display-on(700px,none);
 }
-
